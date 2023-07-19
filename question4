@@ -1,0 +1,41 @@
+package question4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author hp
+ */
+public class QUESTION4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = input.nextInt();
+
+        int maxNumber;
+        switch (num1 > num2 ? 1 : (num1 < num2 ? -1 : 0)) {
+            case 1:
+                maxNumber = num1;
+                break;
+            case -1:
+                maxNumber = num2;
+                break;
+            default:
+                System.out.println("Both numbers are equal.");
+                input.close();
+                return;
+        }
+
+        System.out.println("The maximum number is: " + maxNumber);
+
+        input.close();
+    }
+}
